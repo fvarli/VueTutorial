@@ -1,0 +1,21 @@
+<script src="/VueTutorial/vue.js"></script>
+
+<div id="app">
+    <p> {{ hello() }} <a v-bind:href="link">Link</a></p>
+</div>
+
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            title: "Hello,",
+            message : "Welcome to this course.",
+            link: "https://ferzendervarli.com"
+        },
+        methods : {
+            hello : function(){
+                return this.title + this.message
+            }
+        }
+    })
+</script>

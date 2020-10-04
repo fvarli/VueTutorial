@@ -1,0 +1,23 @@
+<script src="/VueTutorial/vue.js"></script>
+
+<div id="app">
+    <h1>{{ title }}</h1>
+    <hr>
+    <input type="text" v-on:input="changeTitle">
+    <p>{{ description }}</p>
+</div>
+
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            title : "Test Message",
+            description: "Description"
+        },
+        methods : {
+            changeTitle :function(event){
+                this.description = event.target.value;
+            }
+        }
+    });
+</script>
